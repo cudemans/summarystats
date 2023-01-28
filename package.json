@@ -6,6 +6,10 @@
   "scripts": {
     "test": "run stats"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cudemans/summarystats"
+  },
   "author": "Chris Udemans",
   "license": "ISC"
 }

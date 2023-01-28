@@ -1,0 +1,11 @@
+{
+  "name": "summarystats",
+  "version": "1.0.0",
+  "description": "A package to calculate summary statistics",
+  "main": "index.js",
+  "scripts": {
+    "test": "run stats"
+  },
+  "author": "Chris Udemans",
+  "license": "ISC"
+}

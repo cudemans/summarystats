@@ -36,4 +36,25 @@ function getStandDev(array, isSample = true) {
   return Math.sqrt(getVariance(array, (isSample = isSample)));
 }
 
-module.exports = { getMean, getMedian, getMode, getVariance, getStandDev };
+function getPercentile(array, percentile) {
+  const sorted = array.sort((a, b) => {
+    return a - b;
+  });
+
+  const index = array.length * percentile;
+
+  if (!Number.isInteger(index)) {
+    return sorted[Math.ceil(index) - 1];
+  } else {
+    return (sorted[index - 1] + sorted[index]) / 2;
+  }
+}
+
+module.exports = {
+  getMean,
+  getMedian,
+  getMode,
+  getVariance,
+  getStandDev,
+  getPercentile,
+};

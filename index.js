@@ -1,9 +1,28 @@
+// HELPER FUNCTIONS
+function sort(array) {
+  return array.sort((a, b) => {
+    return a - b;
+  });
+}
+
+// END HELPER FUNCTIONS
+
 function getMean(array) {
   return array.reduce((a, b) => a + b) / array.length;
 }
 
+function getTrimmedMean(array, trim) {
+  const copy = [...array];
+  const sorted = sort(copy);
+
+  sorted.splice(0, trim);
+  sorted.splice(-trim);
+
+  return sorted.reduce((a, b) => a + b, 0) / sorted.length;
+}
+
 function getMedian(array) {
-  const sorted = array.sort((a, b) => a - b);
+  const sorted = sort(array);
   const mid = Math.floor(sorted.length / 2);
   return sorted.length % 2 !== 0
     ? sorted[mid]
@@ -37,9 +56,7 @@ function getStandDev(array, isSample = true) {
 }
 
 function getPercentile(array, percentile) {
-  const sorted = array.sort((a, b) => {
-    return a - b;
-  });
+  const sorted = sort(array);
 
   const index = array.length * percentile;
 
@@ -52,6 +69,7 @@ function getPercentile(array, percentile) {
 
 module.exports = {
   getMean,
+  getTrimmedMean,
   getMedian,
   getMode,
   getVariance,

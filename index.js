@@ -7,10 +7,21 @@ function sort(array) {
 
 // END HELPER FUNCTIONS
 
+/**
+ * Calculates the mean of a given array
+ * @param array {Array} - Array of numbers
+ * @returns {Number} - Mean of the given array
+ **/
 function getMean(array) {
   return array.reduce((a, b) => a + b) / array.length;
 }
 
+/**
+ * Calculates the trimmed mean of a given array
+ * @param array {Array} - Array of numbers
+ * @param trim {Number} - The number of values to remove from each end of the array
+ * @returns {Number} - Trimmed mean of the given array
+ **/
 function getTrimmedMean(array, trim) {
   const copy = [...array];
   const sorted = sort(copy);
@@ -21,6 +32,11 @@ function getTrimmedMean(array, trim) {
   return sorted.reduce((a, b) => a + b, 0) / sorted.length;
 }
 
+/**
+ * Calculates the median of a given array
+ * @param array {Array} - Array of numbers
+ * @returns {Number} - Median of the given array
+ **/
 function getMedian(array) {
   const sorted = sort(array);
   const mid = Math.floor(sorted.length / 2);
@@ -29,6 +45,11 @@ function getMedian(array) {
     : (sorted[mid - 1] + sorted[mid]) / 2;
 }
 
+/**
+ * Calculates the mode of a given array
+ * @param array {Array} - Array of numbers
+ * @returns {Number} - Mode of the given array
+ **/
 function getMode(array) {
   const counts = {};
   array.forEach((num) => {
@@ -39,6 +60,12 @@ function getMode(array) {
   return mode.length === 1 ? mode[0] : mode;
 }
 
+/**
+ * Calculates the variance of a given array
+ * @param array {Array} - Array of numbers
+ * @param {Boolean} [isSample=true] - Whether or not the data is a population or sample
+ * @returns {Number} - Variance of the array
+ **/
 function getVariance(array, isSample = true) {
   const mean = getMean(array);
 
@@ -51,10 +78,22 @@ function getVariance(array, isSample = true) {
   return store.reduce((total, d) => total + d, 0) / length;
 }
 
+/**
+ * Calculates the standard variation of a given array
+ * @param array {Array} - Array of numbers
+ * @param {Boolean} [isSample=true] - Whether or not the data is a population or sample
+ * @returns {Number} - Standard deviation of the array
+ **/
 function getStandDev(array, isSample = true) {
   return Math.sqrt(getVariance(array, (isSample = isSample)));
 }
 
+/**
+ * Calculates a percentile of a given array
+ * @param array {Array} - Array of numbers
+ * @param {Number} - Percentile to calculate
+ * @returns {Number} - Percentile for the given array
+ **/
 function getPercentile(array, percentile) {
   const sorted = sort(array);
 
@@ -70,6 +109,71 @@ function getPercentile(array, percentile) {
   }
 }
 
+/**
+ * Calculates the first, middle, and third quartiles for a given array
+ * @param array {Array} - Array of numbers
+ * @returns {Object} - First, middle, and third quartiles of the given array
+ **/
+function getQuartiles(array) {
+  const quartiles = [25, 50, 75];
+
+  const store = {};
+  quartiles.forEach((quartile, i) => {
+    const currQuartile = getPercentile(array, quartile);
+    store[`Q${i + 1}`] = currQuartile;
+  });
+
+  return store;
+}
+
+/**
+ * Calculates the range for a given array
+ * @param array {Array} - Array of numbers
+ * @returns {Number} - Range of the given array
+ **/
+function getRange(array) {
+  return Math.max(...array) - Math.min(...array);
+}
+
+/**
+ * Calculates the inter-quartile range of a given array
+ * @param array {Array} - Array of numbers
+ * @returns {Number} - Inter-quartile range of the given array
+ **/
+function getIQR(array) {
+  const quartiles = getQuartiles(array);
+
+  return quartiles["Q3"] - quartiles["Q1"];
+}
+
+/**
+ * Calculates the coefficient of variation of a given array
+ * @param array {Array} - Array of numbers
+ * @param {Boolean} [isSample=true] - Whether or not the data is a population or sample
+ * @returns {String} - Coefficient of variation of a given array
+ **/
+function getCoV(array, isSample = true) {
+  const mean = getMean(array);
+  const std = getStandDev(array, (isSample = isSample));
+
+  return `${((std / mean) * 100).toFixed(2)}%`;
+}
+
+/**
+ * Calculates the mean absolute deviation of a given array
+ * @param array {Array} - Array of numbers
+ * @returns {Number} - Mean absolute deviation of the given array
+ **/
+function getMAD(array) {
+  const median = getMedian(array);
+
+  const mapped = array.map((d) => {
+    return Math.abs(d - median);
+  });
+
+  return mapped.reduce((a, b) => a + b, 0) / array.length;
+}
+
 module.exports = {
   getMean,
   getTrimmedMean,
@@ -78,4 +182,9 @@ module.exports = {
   getVariance,
   getStandDev,
   getPercentile,
+  getQuartiles,
+  getRange,
+  getCoV,
+  getMAD,
+  getIQR,
 };

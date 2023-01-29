@@ -58,7 +58,10 @@ function getStandDev(array, isSample = true) {
 function getPercentile(array, percentile) {
   const sorted = sort(array);
 
-  const index = array.length * percentile;
+  let index =
+    percentile < 1
+      ? array.length * percentile
+      : array.length * (percentile / 100);
 
   if (!Number.isInteger(index)) {
     return sorted[Math.ceil(index) - 1];

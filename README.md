@@ -2,6 +2,8 @@
 
 A lightweight package for summary stats in JavaScript. Please note this package is in the early stage of development. Take care when using it.
 
+Expanded documentation coming soon.
+
 ## Installation
 
 So far the package can only be installed through npm. unpkg coming soon.

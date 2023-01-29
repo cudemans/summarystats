@@ -160,9 +160,9 @@ function getCoV(array, isSample = true) {
 }
 
 /**
- * Calculates the mean absolute deviation of a given array
+ * Calculates the median absolute deviation of a given array
  * @param array {Array} - Array of numbers
- * @returns {Number} - Mean absolute deviation of the given array
+ * @returns {Number} - Median absolute deviation of the given array
  **/
 function getMAD(array) {
   const median = getMedian(array);

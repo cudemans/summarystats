@@ -23,6 +23,11 @@ So far, the package can calculate the following stats:
 5. `getVariance`: Takes an array and returns its variance. `isSample` can be used to specify whether the data is the population or sample. By default `isSample` is set to `true`.
 6. `getStandDev`: Takes an array and returns its standard deviation. `isSample` can be used to specify whether the data is the population or sample. By default `isSample` is set to `true`.
 7. `getPercentile`: Takes and array and and returns the `nth` percentile.
+8. `getQuartiles`: Takes an array and returns the first, middle, and third quartiles.
+9. `getRange`: Takes an array and returns its range.
+10. `getIQR`: Takes an array and returns its inter-quartile range.
+11. `getCoV`: Takes and array and returns its coefficient of variation.
+12. `getMAD`: Takes and array and returns its median absolute deviation.
 
 ## Importing
 

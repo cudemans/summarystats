@@ -33,4 +33,4 @@ So far, the package can calculate the following stats:
 
 Functions can be imported individually. For example:
 
-`const { getMean } = require('summarystats')`
+`import { getMean } from 'summarystats'`

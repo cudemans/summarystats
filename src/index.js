@@ -1,0 +1,12 @@
+export { default as getMean } from "./getMean.js";
+export { default as getTrimmedMean } from "./getTrimmedMean.js";
+export { default as getMedian } from "./getMedian.js";
+export { default as getMode } from "./getMode.js";
+export { default as getVariance } from "./getVariance.js";
+export { default as getStandDev } from "./getStandDev.js";
+export { default as getPercentile } from "./getPercentile.js";
+export { default as getQuartiles } from "./getQuartiles.js";
+export { default as getRange } from "./getRange.js";
+export { default as getIQR } from "./getIQR.js";
+export { default as getCoV } from "./getCoV.js";
+export { default as getMAD } from "./getMAD.js";

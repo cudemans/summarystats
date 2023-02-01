@@ -2,7 +2,10 @@ import sort from "./sort.js";
 import { arrayError, lengthError } from "./errors.js";
 
 /**
- * Calculates the trimmed mean of a given array
+ *  The trimmed mean is a statistical measure of central tendency, much like the mean and median.
+ * It involves the calculation of the mean after discarding given parts of a probability distribution
+ * or sample at the high and low end, and typically discarding an equal amount of both.
+ * -- [Wikipedia](https://en.wikipedia.org/wiki/Truncated_mean)
  * @param array {Array} - Array of numbers
  * @param trim {Number} - The number of values to remove from each end of the array
  * @returns {Number} Trimmed mean of the given array

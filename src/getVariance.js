@@ -1,7 +1,10 @@
 import { arrayError, lengthError } from "./errors.js";
 import getMean from "./getMean.js";
 /**
- * Calculates the variance of a given array
+ * Variance is the expectation of the squared deviation of a random variable from its
+ * population mean or sample mean. Variance is a measure of dispersion, meaning it is a measure
+ * of how far a set of numbers is spread out from their average value.
+ * -- [Wikipedia](https://en.wikipedia.org/wiki/Variance)
  * @param array {Array} - Array of numbers
  * @param {Boolean} [isSample=true] - Whether or not the data is a population or sample
  * @returns {Number} Variance of the array

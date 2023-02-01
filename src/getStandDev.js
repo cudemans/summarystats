@@ -1,6 +1,9 @@
 import getVariance from "./getVariance.js";
 /**
- * Calculates the standard variation of a given array
+ * the standard deviation is a measure of the amount of variation or dispersion of a set of values.
+ * A low standard deviation indicates that the values tend to be close to the mean of the set,
+ * while a high standard deviation indicates that the values are spread out over a wider range.
+ * -- [Wikipedia](https://en.wikipedia.org/wiki/Standard_deviation)
  * @alias getStandardDeviation
  * @param array {Array} - Array of numbers
  * @param {Boolean} [isSample=true] - Whether or not the data is a population or sample

@@ -10,7 +10,6 @@ import { arrayEqualError, arrayError, lengthError } from "./errors.js";
  * @param array1 {Array} - Array of numbers
  * @param array2 {Array} - Array of numbers
  * @returns {Number} Correlation coefficient
- 
  **/
 
 export default function getCorrCoeff(array1, array2) {

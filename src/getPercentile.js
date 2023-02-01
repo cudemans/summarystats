@@ -1,7 +1,9 @@
 import sort from "./sort.js";
 import { arrayError, lengthError } from "./errors.js";
 /**
- * Calculates a percentile of a given array
+ * A k-th percentile is a score below which a given percentage k of scores in its frequency distribution
+ * falls (exclusive definition) or a score at or below which a given percentage falls (inclusive definition).
+ * -- [Wikipedia](https://en.wikipedia.org/wiki/Percentile)
  * @param array {Array} - Array of numbers
  * @param {Number} - Percentile to calculate
  * @returns {Number} Percentile for the given array

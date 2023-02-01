@@ -1,6 +1,9 @@
 import { arrayError } from "./errors.js";
 /**
- * Calculates the mode of a given array
+ * The mode is the value that appears most often in a set of data values.
+ * Like the statistical mean and median, the mode is a way of expressing,
+ * in a (usually) single number, important information about a random variable or a population.
+ * -- [Wikipedia](https://en.wikipedia.org/wiki/Mode_(statistics))
  * @param array {Array} - Array of numbers
  * @returns {Number} Mode of the given array
  **/

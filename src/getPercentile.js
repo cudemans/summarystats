@@ -1,11 +1,16 @@
 import sort from "./sort.js";
+import { arrayError, lengthError } from "./errors.js";
 /**
  * Calculates a percentile of a given array
  * @param array {Array} - Array of numbers
  * @param {Number} - Percentile to calculate
- * @returns {Number} - Percentile for the given array
+ * @returns {Number} Percentile for the given array
  **/
 export default function getPercentile(array, percentile) {
+  // Error handling
+  arrayError(array);
+  lengthError(array, 2);
+
   const sorted = sort(array);
 
   let index =

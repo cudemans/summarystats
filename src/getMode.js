@@ -1,9 +1,13 @@
+import { arrayError } from "./errors.js";
 /**
  * Calculates the mode of a given array
  * @param array {Array} - Array of numbers
- * @returns {Number} - Mode of the given array
+ * @returns {Number} Mode of the given array
  **/
 export default function getMode(array) {
+  // Error handling
+  arrayError(array);
+
   const counts = {};
   array.forEach((num) => {
     counts[num] = (counts[num] || 0) + 1;

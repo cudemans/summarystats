@@ -1,13 +1,17 @@
+import { arrayError, lengthError } from "./errors.js";
 import getMean from "./getMean.js";
 /**
  * Calculates the variance of a given array
  * @param array {Array} - Array of numbers
  * @param {Boolean} [isSample=true] - Whether or not the data is a population or sample
- * @returns {Number} - Variance of the array
+ * @returns {Number} Variance of the array
  **/
 export default function getVariance(array, isSample = true) {
-  const mean = getMean(array);
+  // Error handing
+  arrayError(array);
+  lengthError(array, 2);
 
+  const mean = getMean(array);
   const store = array.map((d) => {
     return (d - mean) ** 2;
   });

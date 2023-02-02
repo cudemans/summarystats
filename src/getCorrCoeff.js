@@ -5,6 +5,7 @@ import { arrayEqualError, arrayError, lengthError } from "./errors.js";
  * The correlation coefficient is a measure of linear correlation between two sets of data.
  * It is the ratio between the covariance of two variables and the product of their standard deviations; thus,
  * it is essentially a normalized measurement of the covariance, such that the result always has a value between −1 and 1.
+ * Currently, this only supports one dimensional data.
  * -- [Wikipedia](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)
  * @alias getCorrelationCoefficient
  * @param array1 {Array} - Array of numbers

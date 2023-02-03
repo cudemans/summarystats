@@ -1,4 +1,4 @@
-import sort from "./sort.js";
+import sort from "./utils/sort.js";
 import { arrayError, lengthError } from "./errors.js";
 /**
  * A k-th percentile is a score below which a given percentage k of scores in its frequency distribution

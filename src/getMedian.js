@@ -1,4 +1,4 @@
-import sort from "./sort.js";
+import sort from "./utils/sort.js";
 import { arrayError } from "./errors.js";
 /**
  * the median is the value separating the higher half from the lower half of a data sample,

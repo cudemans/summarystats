@@ -1,4 +1,4 @@
-import sort from "./sort.js";
+import sort from "./utils/sort.js";
 import { arrayError, lengthError } from "./errors.js";
 
 /**

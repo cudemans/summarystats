@@ -28,3 +28,4 @@ export {
   default as getCorrelationCoefficient,
 } from "./getCorrCoeff.js";
 export { default as getZScore } from "./getZScore.js";
+export { default as getStandardError } from "./getStandardError.js";

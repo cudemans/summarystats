@@ -31,9 +31,17 @@ So far, the package can calculate the following stats:
 13. `getZScore`: Takes an array and a value and returns the z-score for the value.
 14. `getCorrCoeff`: Takes two arrays and calculates their correlation coefficient.
 15. `getHarmonicMean`: Takes an array and returns the harmonic mean.
+16. `getStandardError`: Takes an array and returns the standard error.
 
-## Importing
+## Importing and usage
 
 Functions can be imported individually. For example:
 
 `import { getMean } from 'summarystats'`
+
+And then called:
+
+```
+const array = [2, 3, 4, 5, 6]
+const mean = getMean(array)
+```

@@ -1,6 +1,6 @@
 import getPercentile from "./getPercentile.js";
 /**
- *  a quartile is a type of quantile which divides the number of data points into four parts,
+ *  A quartile is a type of quantile which divides the number of data points into four parts,
  *  or quarters, of more-or-less equal size. The data must be ordered from smallest to largest
  * to compute quartiles; as such, quartiles are a form of order statistic.
  * -- [Wikipedia](https://en.wikipedia.org/wiki/Quartile)

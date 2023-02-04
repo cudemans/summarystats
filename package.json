@@ -1,6 +1,6 @@
 {
   "name": "summarystats",
-  "version": "0.2.1",
+  "version": "0.3.1",
   "description": "A package to calculate summary statistics",
   "main": "src/index.js",
   "type": "module",
@@ -12,6 +12,11 @@
     "type": "git",
     "url": "git+https://github.com/cudemans/summarystats"
   },
+  "keywords": [
+    "summary",
+    "statistics",
+    "javascript"
+  ],
   "author": "Chris Udemans",
-  "license": "ISC"
+  "license": "MIT"
 }

@@ -14,7 +14,7 @@ To install:
 
 ## Functionality
 
-So far, the package can calculate the stats. Please see the [functionality](https://github.com/cudemans/summarystats/wiki/Functionality) wiki page for more details in implementation.
+So far, the package can calculate the stats. Please see the [functionality](https://github.com/cudemans/summarystats/wiki/Functionality) wiki page for more implementation details.
 
 1. `getMean`: Takes an array and returns its mean.
 2. `getTrimmedMean`: Takes and array and n, where n is the number of items to remove from the beginning and end of the distribution.

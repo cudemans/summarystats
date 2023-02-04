@@ -14,10 +14,10 @@ To install:
 
 ## Functionality
 
-So far, the package can calculate the following stats:
+So far, the package can calculate the stats. Please see the [functionality](https://github.com/cudemans/summarystats/wiki/Functionality) wiki page for more details in implementation.
 
 1. `getMean`: Takes an array and returns its mean.
-2. `trimmedMean`: Takes and array and n, where n is the number of items to remove from the beginning and end of the distribution.
+2. `getTrimmedMean`: Takes and array and n, where n is the number of items to remove from the beginning and end of the distribution.
 3. `getMedian`: Takes an array and returns its median.
 4. `getMode`: Takes and array and returns its mode.
 5. `getVariance`: Takes an array and returns its variance. `isSample` can be used to specify whether the data is a population or sample. By default `isSample` is set to `true`.

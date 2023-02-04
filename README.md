@@ -2,7 +2,7 @@
 
 A lightweight package for summary stats in JavaScript. Please note this package is in the early stage of development. Take care when using it.
 
-Expanded documentation coming soon.
+Expanded documentation can be found in the [functionality](https://github.com/cudemans/summarystats/wiki/Functionality) wiki.
 
 ## Installation
 

@@ -6,6 +6,7 @@ import getStandDev from "./getStandDev.js";
  * -- [Wikipedia](https://en.wikipedia.org/wiki/Standard_score)
  * @param value {Number} - A value for which to calculate the z-score
  * @param array {Array} - Array in which the value appears
+ * @param {Boolean} [isSample=true] - To specify whether data is a sample of population. Default is true.
  * @returns {Number} Z-score
  **/
 

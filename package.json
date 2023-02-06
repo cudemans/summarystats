@@ -18,5 +18,8 @@
     "javascript"
   ],
   "author": "Chris Udemans",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
 }

@@ -18,4 +18,10 @@ function arrayEqualError(array1, array2) {
   }
 }
 
-export { lengthError, arrayError, arrayEqualError };
+function checkNegativesError(num) {
+  if (num < 0) {
+    throw new Error("All numbers need to be greater than zero.");
+  }
+}
+
+export { lengthError, arrayError, arrayEqualError, checkNegativesError };

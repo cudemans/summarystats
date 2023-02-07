@@ -1,6 +1,7 @@
 export { default as getMean } from "./getMean.js";
 export { default as getTrimmedMean } from "./getTrimmedMean.js";
 export { default as getHarmonicMean } from "./getHarmonicMean.js";
+export { default as getGeometricMean } from "./getGeometricMean.js";
 export { default as getMedian } from "./getMedian.js";
 export { default as getMode } from "./getMode.js";
 export { default as getVariance } from "./getVariance.js";

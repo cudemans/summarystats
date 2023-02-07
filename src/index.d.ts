@@ -1,6 +1,7 @@
 export { default as getMean } from "./getMean";
 export { default as getTrimmedMean } from "./getTrimmedMean";
 export { default as getHarmonicMean } from "./getHarmonicMean";
+export { default as getGeometricMean } from "./getGeometricMean";
 export { default as getMedian } from "./getMedian";
 export { default as getMode } from "./getMode";
 export { default as getVariance } from "./getVariance";

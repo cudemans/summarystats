@@ -1,3 +1,4 @@
+import sum from "./utils/sum.js";
 import { arrayError, lengthError } from "./errors.js";
 
 /**
@@ -12,5 +13,5 @@ export default function getMean(array) {
   arrayError(array);
   lengthError(array, 1);
 
-  return array.reduce((a, b) => a + b) / array.length;
+  return sum(array) / array.length;
 }

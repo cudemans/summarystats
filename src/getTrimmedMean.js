@@ -1,4 +1,5 @@
 import sort from "./utils/sort.js";
+import sum from "./utils/sum.js";
 import { arrayError, lengthError } from "./errors.js";
 
 /**
@@ -21,5 +22,5 @@ export default function getTrimmedMean(array, trim) {
   sorted.splice(0, trim);
   sorted.splice(-trim);
 
-  return sorted.reduce((a, b) => a + b, 0) / sorted.length;
+  return sum(sorted) / sorted.length;
 }

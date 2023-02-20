@@ -1,5 +1,6 @@
 import { arrayError, lengthError } from "./errors.js";
 import getMean from "./getMean.js";
+import sum from "./utils/sum.js";
 /**
  * Variance is the expectation of the squared deviation of a random variable from its
  * population mean or sample mean. Variance is a measure of dispersion, meaning it is a measure
@@ -21,5 +22,5 @@ export default function getVariance(array, isSample = true) {
 
   const length = isSample ? array.length - 1 : array.length;
 
-  return store.reduce((total, d) => total + d, 0) / length;
+  return sum(store) / length;
 }

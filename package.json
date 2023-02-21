@@ -1,6 +1,6 @@
 {
   "name": "summarystats",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "A package to calculate summary statistics",
   "main": "src/index.js",
   "type": "module",

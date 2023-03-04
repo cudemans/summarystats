@@ -31,7 +31,14 @@ So far, the package can calculate the following stats:
 13. `getZScore`: Takes an array and a value and returns the z-score for the value.
 14. `getCorrCoeff`: Takes two arrays and calculates their correlation coefficient.
 15. `getHarmonicMean`: Takes an array and returns the harmonic mean.
-16. `getStandardError`: Takes an array and returns the standard error.
+16. `getGeometricMean`: Takes an array and returns the geometric mean.
+17. `getStandardError`: Takes an array and returns the standard error.
+18. `getKurtosis` : Takes an array and returns the kurtosis.
+19. `getSkewness`: Takes an array and calculates the skewness.
+
+### Utilities
+
+1. `matrixArrayIterator`: Utility function to compute a statistic across the axes of an n-dimensional array.
 
 ## Importing and usage
 

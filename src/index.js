@@ -33,3 +33,6 @@ export { default as getZScore } from "./getZScore.js";
 export { default as getStandardError } from "./getStandardError.js";
 export { default as getSkewness } from "./getSkewness.js";
 export { default as getKurtosis } from "./getKurtosis.js";
+
+// Utility functions
+export { default as matrixArrayIterator } from "./utils/matrixArrayIterator.js";

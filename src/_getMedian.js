@@ -1,13 +1,6 @@
 import sort from "./utils/sort.js";
 import { arrayError } from "./errors.js";
-/**
- * The median is the value separating the higher half from the lower half of a data sample,
- * a population, or a probability distribution. For a data set,
- * it may be thought of as "the middle" value.
- * -- [Wikipedia](https://en.wikipedia.org/wiki/Median)
- * @param array {Array} - Array of numbers
- * @returns {Number} Median of the given array
- **/
+
 export default function _getMedian(array) {
   // Error handling
   arrayError(array);

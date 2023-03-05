@@ -52,3 +52,14 @@ And then called:
 const array = [2, 3, 4, 5, 6];
 const mean = getMean(array);
 ```
+
+Alternatively, the `stats` object can be imported:
+
+`import stats from 'summarystats'`
+
+And then statistical function can be called on this object. This negates the need for multiple imports.
+
+```js
+const array = [2, 3, 4, 5, 6];
+const mean = stats.getMean(array);
+```
